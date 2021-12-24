@@ -2,6 +2,9 @@ import { flatten, baseFlatten, isFlattenble } from "./src/flatten";
 import { isArguments } from "./src/is";
 import { uuid, uuidByDate, uuidByChar, uuidByDifficulty } from "./src/uuid";
 import { move } from "./src/move";
+import { toNumber } from "./src/toNumber";
+import { debounce } from "./src/debounce";
+import { now } from "./src/now";
 
 export {
     flatten, 
@@ -12,5 +15,8 @@ export {
     uuidByDate, 
     uuidByChar, 
     uuidByDifficulty,
-    move
+    move,
+    toNumber,
+    debounce,
+    now
 }
