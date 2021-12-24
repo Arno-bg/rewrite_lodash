@@ -20,11 +20,11 @@ function baseFlatten (array: any[], depth: number, predicate?: TPredicate, isStr
     }
 
     for (const value of array) {
-        if (depth > 0 && predicate(array)) {
+        if (depth > 0 && predicate(value)) {
             if (depth > 1) {
                 baseFlatten(value, depth - 1, predicate, isStrict, result);
             } else {
-                result.push(value);
+                result.push(...value);
             }   
         } else if (!isStrict){
             result[result.length] = value;
@@ -39,6 +39,8 @@ function flatten(array: any[], depth: number, predicate?: TPredicate) {
 
     return _len ? baseFlatten(array, depth, predicate) : [];
 };
+var arr = [[123,123],[321,321,[111,123]]];
+flatten(arr, 11)
 
 export {
     flatten,
