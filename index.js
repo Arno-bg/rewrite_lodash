@@ -5,6 +5,9 @@ import { move } from "./src/move";
 import { toNumber } from "./src/toNumber";
 import { debounce } from "./src/debounce";
 import { now } from "./src/now";
+import { currying } from "./src/currying";
+import { cs } from "./src/cs";
+import { cloneDeep, cloneSymbol, cloneReg, cloneFunction } from "./src/cloneDeep"
 
 export {
     flatten, 
@@ -18,5 +21,11 @@ export {
     move,
     toNumber,
     debounce,
-    now
+    now,
+    currying,
+    cs,
+    cloneDeep, 
+    cloneSymbol, 
+    cloneReg, 
+    cloneFunction
 }

@@ -32,4 +32,6 @@ const cs = (...args: ClassNamesArg[]): string => {
     return [...new Set(classNames)].join(' ');
 };
 
-export default cs;
+export {
+    cs
+};
